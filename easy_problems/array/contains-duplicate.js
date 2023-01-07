@@ -45,3 +45,23 @@ const containsDuplicate = (nums, map = {}, l = 0, r = nums.length - 1) => {
     return false;
 };
 
+
+//1 -> 2 -> 3 -> 4 -> 5 -> null
+
+//null <- 1 <- 2 <- 3 <- 4 <- 5
+
+reverselist(){
+    let first = head;
+    let second = first.next;
+    tail = head;
+
+    while(second){
+     let temp = second.next;
+     second.next = first;
+     first = second;
+     second = temp;   
+    }
+
+    head.next = null;
+    head = first;   
+}
