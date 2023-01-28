@@ -17,3 +17,13 @@ var countSegments1 = function(s) {
   
     return count;
   };
+
+  var countSegments2 = function(s) {
+    let arr = s.split(" ")
+      let ans = 0
+      for (let i = 0; i < arr.length; i++) {
+          if (arr[i] != " " && arr[i] != "")
+              ans++
+      }
+      return ans
+  };
