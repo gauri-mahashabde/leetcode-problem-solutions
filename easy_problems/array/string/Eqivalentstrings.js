@@ -24,3 +24,9 @@ const arrayStringsAreEqual1 = (word1, word2) => {
   
     return str1 === str2;
   }
+
+  //solution 3
+
+  const arrayStringsAreEqual3 = (word1, word2) => {
+	return word1.join('') === word2.join('');
+};
