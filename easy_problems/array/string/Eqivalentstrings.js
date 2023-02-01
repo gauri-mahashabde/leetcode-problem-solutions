@@ -15,3 +15,12 @@ const arrayStringsAreEqual = (word1, word2) => {
 
 	return str1 === str2;
 };
+
+//solution 2
+
+const arrayStringsAreEqual1 = (word1, word2) => {
+    const str1 = word1.reduce((acc, cv) => acc + cv, '')
+    const str2 = word2.reduce((acc, cv) => acc + cv, '')
+  
+    return str1 === str2;
+  }
