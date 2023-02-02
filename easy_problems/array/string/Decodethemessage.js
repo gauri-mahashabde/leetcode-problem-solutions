@@ -14,3 +14,16 @@ var decodeMessage = function(key, message) {
 
     return result
 };
+
+//solution 2 
+
+var decodeMessage = function(key, message) {
+    var k = key.replaceAll(" " , "")
+    var alphabet = k.split('').filter(function(item, i, ar){ return ar.indexOf(item) === i; });
+    console.log(alphabet)
+    var a = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', ' ']
+    alphabet.push(' ')
+    var str = ''
+    for (let i of message) str+=a[alphabet.indexOf(i)]
+    return str
+}
