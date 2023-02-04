@@ -1,5 +1,7 @@
 //https://leetcode.com/problems/to-lower-case/
 
+//solution 1
+
 var toLowerCase = function(str) {
     let res = "";
     
@@ -15,4 +17,12 @@ var toLowerCase = function(str) {
     
     return res;
 };
+
+//solution 2
+var toLowerCase = function(s) {
+    let char = s.toLowerCase()
+    return char;
+};
+
+
 
