@@ -6,3 +6,17 @@ const interpret = function (command) {
   return x;
 };
 
+const interpret1 = (command) => {
+  const str = [];
+  for (let i = 0; i < command.length - 1; i++) {
+    if (command.charAt(i) === "G") str.push("G");
+    if (command.charAt(i) === "(") {
+      if (command.charAt(i + 1) === ")") str.push("o");
+      else {
+        str.push("al");
+      }
+    }
+  }
+  if (command.charAt(command.length - 1) === "G") str.push("G");
+  return str.join("");
+};
