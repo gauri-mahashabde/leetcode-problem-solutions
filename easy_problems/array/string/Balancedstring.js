@@ -23,3 +23,13 @@ const balancedStringSplit = function (s) {
   }
   return max;
 };
+
+const balancedStringSplit1 = function (s) {
+  let balanceStatus = 0;
+  let count = 0;
+  for (let i = 0; i < s.length; i++) {
+    s[i] === "R" ? balanceStatus++ : balanceStatus--;
+    balanceStatus === 0 && count++;
+  }
+  return count;
+};
