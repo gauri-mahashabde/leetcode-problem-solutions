@@ -1,5 +1,7 @@
 //https://leetcode.com/problems/number-of-good-pairs/
 
+//solution 1
+
 const numIdenticalPairs = function (nums) {
   let count = 0;
 
@@ -11,5 +13,22 @@ const numIdenticalPairs = function (nums) {
     }
   }
 
+  return count;
+};
+
+//solution 2
+
+const numIdenticalPairs1 = function (nums) {
+  const map = {};
+  let count = 0;
+
+  for (const number of nums) {
+    if (map[number]) {
+      count += map[number];
+      map[number] += 1;
+    } else {
+      map[number] = 1;
+    }
+  }
   return count;
 };
