@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/shuffle-the-array/
 
-//solution
+//solution 1
 const shuffle = function (nums, n) {
   let res = [];
 
@@ -9,4 +9,18 @@ const shuffle = function (nums, n) {
   }
 
   return res;
+};
+
+//solution 2
+const shuffle1 = function (nums, n) {
+  const newArray = [];
+  let position = 0;
+  for (let i = 0; i <= nums.length - 1; i++) {
+    if (position <= nums.length - 1) {
+      newArray[position] = nums[i];
+      newArray[position + 1] = nums[i + n];
+      position = position + 2;
+    }
+  }
+  return newArray;
 };
