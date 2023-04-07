@@ -15,3 +15,22 @@ const countConsistentStrings1 = (allowed, words) => {
     return w.split("").every((l) => set.has(l)) ? ++a : a;
   }, 0);
 };
+
+//solution 3
+var countConsistentStrings = function (allowed, words) {
+  let count = 0;
+
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    let flag = true;
+
+    for (let j = 0; j < word.length; j++) {
+      let letter = word[j];
+      if (allowed.indexOf(letter) == -1) flag = false;
+    }
+
+    if (flag) count++;
+  }
+
+  return count;
+};
