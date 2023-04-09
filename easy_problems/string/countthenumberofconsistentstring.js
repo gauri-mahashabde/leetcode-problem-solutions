@@ -17,7 +17,7 @@ const countConsistentStrings1 = (allowed, words) => {
 };
 
 //solution 3
-var countConsistentStrings = function (allowed, words) {
+var countConsistentStrings2s = function (allowed, words) {
   let count = 0;
 
   for (let i = 0; i < words.length; i++) {
