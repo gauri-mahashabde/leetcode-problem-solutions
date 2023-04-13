@@ -24,3 +24,15 @@ const shuffle1 = function (nums, n) {
   }
   return newArray;
 };
+
+//solution 3
+const shuffle2 = function (nums, n) {
+  let start = 0,
+    mid = n;
+  const arr = [];
+  while (mid < nums.length) {
+    arr.push(nums[start++]);
+    arr.push(nums[mid++]);
+  }
+  return arr;
+};
