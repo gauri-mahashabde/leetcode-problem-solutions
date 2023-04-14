@@ -11,3 +11,17 @@ const filter = function (arr, fn) {
   }
   return res;
 };
+
+//solution 2
+
+const filter1 = function (arr, fn) {
+  let i = 0;
+  var arrTotal = [];
+  while (i < arr.length) {
+    if (fn(arr[i], i)) {
+      arrTotal.push(arr[i]);
+    }
+    i++;
+  }
+  return arrTotal;
+};
