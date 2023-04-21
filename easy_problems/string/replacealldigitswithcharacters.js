@@ -30,3 +30,5 @@ const replaceDigits1 = function (s) {
   }
   return res;
 };
+
+//solution 3
