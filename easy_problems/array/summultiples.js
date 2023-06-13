@@ -26,3 +26,5 @@ const sumOfMultiples1 = function (n) {
   }
   return sum;
 };
+
+//solution 3
