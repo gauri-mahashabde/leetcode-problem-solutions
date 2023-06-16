@@ -34,3 +34,32 @@ const mergeAlternately1 = (word1, word2) => {
 
   return arr.join("");
 };
+
+
+//solution 3
+const mergeAlternately2 = function (word1, word2) {
+    let results = ''
+
+    if (word1.length === word2.length) {
+        for (let i = 0; i < word1.length; i++) {
+            results += word1[i]
+            results += word2[i]
+        }
+    } else if (word1.length < word2.length) {
+        for (let i = 0; i < word1.length; i++) {
+            results += word1[i]
+            results += word2[i]
+        }
+        results += word2.slice(word1.length)
+
+    } else{
+        for (let i = 0; i < word2.length; i++) {
+            results += word1[i]
+            results += word2[i]
+        }
+
+        results += word1.slice(word2.length)
+    }
+
+    return results
+};
