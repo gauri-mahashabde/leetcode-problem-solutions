@@ -29,3 +29,13 @@ var minimumSum = function(num) {
     })
     return result
 };
+
+//solution 3
+
+var minimumSum = function(num) {
+    num=num.toString();
+    let arr = num.split("").map(Number);
+    arr.sort((a,b)=>{return a-b});
+    return arr[0]*10+arr[1]*10+arr[2]+arr[3];
+
+};
